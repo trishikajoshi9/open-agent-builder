@@ -1733,8 +1733,8 @@ function WorkflowBuilderInner({ onBack, initialWorkflowId, initialTemplateId }: 
         ) : (selectedNode?.data as any)?.nodeType === 'extract' ? (
           <ExtractNodePanel
             nodeData={{
-              id: selectedNode.id,
-              ...(selectedNode.data as any),
+              id: selectedNode!.id,
+              ...(selectedNode!.data as any),
             }}
             onClose={() => setSelectedNode(null)}
             onUpdate={handleUpdateNodeData}
